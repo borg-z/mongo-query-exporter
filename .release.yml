@@ -1,0 +1,12 @@
+commitFormat: angular
+changelog:
+  printAll: true  ## Print all valid commits to changelog
+branch:
+  master: 'master'
+release: 'github'
+github:
+  repo: "mongo-query-exporter"
+  user: "borgkun"
+assets:
+  - name: mongo-query-exporter
+    compress: false

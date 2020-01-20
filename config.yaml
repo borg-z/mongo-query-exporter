@@ -1,0 +1,12 @@
+collector_name: mongo-dev
+database_uri: mongodb://mongo.dev/
+metrics:
+  - metric_name: esia_users # Название метрики
+    type: gauge # Не импользуется
+    function: aggregate # Не импользуется
+    database: user # База данных
+    collection: user # Коллекция
+    interval: 5s # Время жизни кэша. После выполнения запроса он попадает в кэш на время interval. 
+    value: count # Значение. `{ "_id" : null, "count" : 20 }`
+    query: |
+      [ {$match: {$and:[{"some_user_id": {$ne: null}}, { $or: [{"some_date": {$lte: "2019-02-28 23:59:59"} },{"some_date": null}]}]}}, { $group: { _id: "$id", count: {$sum:1} } }]

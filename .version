@@ -1,0 +1,8 @@
+last:
+  commit: 62832d8a6331e86cadce816349d6517f74423a5a
+  version: 0.0.1-pre-alpha
+next:
+  commit: 766e7a6ebee9d33899acb7dc54c4717617e06a87
+  version: 0.0.2
+branch: master
+commits: {}
